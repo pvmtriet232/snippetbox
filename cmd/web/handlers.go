@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+	"strings"
 )
 
 func home(w http.ResponseWriter, r *http.Request) {
@@ -35,6 +36,18 @@ func home(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Internal Server Error", 500)
 	}
 }
+
+func neuter(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if strings.HasSuffix(r.URL.Path, "/") {
+			http.NotFound(w, r)
+			return
+		}
+
+		next.ServeHTTP(w, r)
+	})
+}
+
 func showSnippet(w http.ResponseWriter, r *http.Request) {
 	id, err := strconv.Atoi(r.URL.Query().Get("id"))
 	if err != nil || id < 1 {
