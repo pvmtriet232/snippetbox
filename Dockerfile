@@ -1,17 +1,17 @@
+# syntax=docker/dockerfile:1
+
 FROM golang:1.16-alpine
+
 WORKDIR /app
 
-
-# Download necessary Go modules
 COPY go.mod ./
 # COPY go.sum ./
 RUN go mod download
 
-# ... the rest of the Dockerfile is ...
-# ...   omitted from this example   ...
-COPY *.go ./
+COPY . .
 
-RUN go build main.go
+RUN go build -o /snipppetbox
+
 EXPOSE 8080
 
-CMD [ "./main" ]
+CMD [ "/snippetbox" ]
