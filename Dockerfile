@@ -11,7 +11,7 @@ RUN go mod download
 # ...   omitted from this example   ...
 COPY *.go ./
 
-RUN go build -o /snippetbox
+RUN go build main.go
 EXPOSE 8080
 
-CMD [ "./docker-gs-ping" ]
+CMD [ "./main" ]
