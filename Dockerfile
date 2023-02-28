@@ -10,5 +10,8 @@ RUN go mod download
 # ... the rest of the Dockerfile is ...
 # ...   omitted from this example   ...
 COPY *.go ./
+
 RUN go build -o /snippetbox
-CMD ["/snippetbox"]
+EXPOSE 8080
+
+CMD [ "./docker-gs-ping" ]
