@@ -10,8 +10,8 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o /snipppetbox
+RUN go build ./cmd/web/ 
 
 EXPOSE 8080
 
-CMD [ "/snippetbox" ]
+CMD [ "./web" ]
