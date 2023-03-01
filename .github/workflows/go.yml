@@ -28,4 +28,4 @@ jobs:
       run: go test -v ./...
 
     - name: list
-      run: la
+      run: ls -a
