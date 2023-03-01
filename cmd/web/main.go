@@ -19,7 +19,7 @@ func main() {
 	// "/static" prefix before the request reaches the file server.
 	mux.Handle("/static/", http.StripPrefix("/static", neuter(fileServer)))
 
-	log.Println("Starting server on :8080")
-	err := http.ListenAndServe(":8080", mux)
+	log.Println("Starting server on :4000")
+	err := http.ListenAndServe(":4000", mux)
 	log.Fatal(err)
 }
