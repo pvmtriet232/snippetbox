@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/pvmtriet232/snippetbox#readme"
   "publishConfig": {
-   "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
+   "@pvmtriet232:registry": "https://npm.pkg.github.com"
  }
 }
