@@ -12,6 +12,6 @@ COPY . .
 
 RUN go build ./cmd/web/ 
 
-EXPOSE 8080
+EXPOSE 4000
 
 CMD [ "./web" ]
