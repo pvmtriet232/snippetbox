@@ -15,8 +15,10 @@
   "bugs": {
     "url": "https://github.com/pvmtriet232/snippetbox/issues"
   },
-  "homepage": "https://github.com/pvmtriet232/snippetbox#readme"
+  "homepage": "https://github.com/pvmtriet232/snippetbox#readme",
+  
   "publishConfig": {
-   "@pvmtriet232:registry": "https://npm.pkg.github.com"
- }
+    "@pvmtriet232:registry": "https://npm.pkg.github.com"
+   }
+
 }
