@@ -16,4 +16,7 @@
     "url": "https://github.com/pvmtriet232/snippetbox/issues"
   },
   "homepage": "https://github.com/pvmtriet232/snippetbox#readme"
+  "publishConfig": {
+   "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
+ }
 }
