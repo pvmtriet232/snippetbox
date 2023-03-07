@@ -28,10 +28,10 @@ func main() {
 	// To keep the main() function tidy I've put the code for creating a connection
 	// pool into the separate openDB() function below. We pass openDB() the DSN
 	// from the command-line flag.
-	// db, err := openDB(*dsn)
-	// if err != nil {
-	// 	errorLog.Fatal(err)
-	// }
+	db, err := openDB(*dsn)
+	if err != nil {
+		errorLog.Fatal(err)
+	}
 
 	defer db.Close()
 
